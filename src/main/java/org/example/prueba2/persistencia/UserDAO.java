@@ -132,7 +132,7 @@ public class UserDAO {
         try {
             ps = conn.connect().prepareStatement(
               "Select id, name, email, status" +
-                  " From User" +
+                  " From Users" +
                   " Where name Like ?"
             );
 

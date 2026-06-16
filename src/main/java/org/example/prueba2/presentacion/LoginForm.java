@@ -58,9 +58,8 @@ public class LoginForm extends JDialog {
             if(userauth != null && userauth.getId() > 0 &&
                     userauth.getEmail().equals(user.getEmail()))
             {
-                JOptionPane.showMessageDialog(null,
-                        "Usuario logeado correctamente", "Login",
-                        JOptionPane.WARNING_MESSAGE);//Temporal
+                this.mainForm.setUserAutenticate(userauth);
+                this.dispose();
             }
             else
             {

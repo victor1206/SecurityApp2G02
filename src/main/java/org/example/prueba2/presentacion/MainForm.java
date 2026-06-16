@@ -5,10 +5,19 @@ import org.example.prueba2.dominio.User;
 
 public class MainForm extends JFrame {
     private User userAutenticate;
+    private JPanel frmPrincipal;
 
     public User getUserAutenticate() {return userAutenticate; }
     public void setUserAutenticate(User userAutenticate)
     { this.userAutenticate = userAutenticate; }
+
+    public MainForm() {
+        setTitle("Sistema en java para escritorio");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        createMenu();
+    }
 
     private void createMenu()
     {
